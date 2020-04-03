@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/btn_start_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="启动服务" />
+
+    <Button
+        android:id="@+id/btn_send_command"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="发送指令" />
+
+    <com.jimi.uartproj.MyEditTextDel
+        android:id="@+id/edt_send_command"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@null"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:padding="5dp"
+        android:hint="输入指令"
+        android:layout_below="@id/btn_send_command"
+        />
+    <LinearLayout
+        android:id="@+id/ll_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/edt_send_command"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="波特率:"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            />
+
+        <com.jimi.uartproj.MyEditTextDel
+            android:id="@+id/edt_baudrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@null"
+            android:drawablePadding="5dp"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:padding="5dp"
+            android:hint="默认为9600"
+            android:inputType="number"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_set"
+        android:text="日志:"
+        android:textSize="20sp"
+        />
+
+    <!--<ListView
+        android:id="@+id/lv_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_log"
+        >
+    </ListView>-->
+
+    <TextView
+        android:id="@+id/tv_log_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_below="@id/tv_log"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        />
+
+</RelativeLayout>
